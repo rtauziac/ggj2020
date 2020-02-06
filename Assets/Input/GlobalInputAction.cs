@@ -38,7 +38,7 @@ public class @GlobalInputAction : IInputActionCollection, IDisposable
                     ""name"": ""Action"",
                     ""type"": ""Button"",
                     ""id"": ""be88869e-e9d2-4064-9271-91f25fd1192e"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -52,11 +52,11 @@ public class @GlobalInputAction : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""QTE"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""e28107f0-23fe-4116-943b-78ce7d9eca5c"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Dpad"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [

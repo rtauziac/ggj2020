@@ -1,21 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 public class TouchGround : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {       
-        if(collision.gameObject.tag == "Floor")
+        if(collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Door")
         {
-            GetComponentInParent<HeroController>().isGrounded = true;
+            if(gameObject.transform.parent.name == "Zoe")
+            {            
+                GetComponentInParent<HeroController>().isGrounded = true;
+            }
+            else if(gameObject.transform.parent.name == "Robot")
+            {
+                GetComponentInParent<RobotController>().isGrounded = true;
+            }
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Floor")
+        if(collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Door")
         {
-            GetComponentInParent<HeroController>().isGrounded = false;
+            if(gameObject.transform.parent.name == "Zoe")
+            {
+                Debug.Log("gnee..");
+                GetComponentInParent<HeroController>().isGrounded = false;
+            }
+            else if(gameObject.transform.parent.name == "Robot")
+            {
+                GetComponentInParent<RobotController>().isGrounded = false;
+            }
         }
     }     
 }
