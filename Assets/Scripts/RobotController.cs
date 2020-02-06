@@ -153,7 +153,7 @@ public class RobotController : MonoBehaviour
 
     IEnumerator TempsAction()      
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return null;
         makeAction = false;
     }
 

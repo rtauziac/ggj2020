@@ -33,7 +33,7 @@ public class EventQTE : MonoBehaviour
     {
         distanceRobotZoe = Vector2.Distance(Zoe.transform.position, Robot.transform.position);
 
-        if(distanceRobotZoe < 2.5 && !QTEStart && Zoe.GetComponent<HeroController>().makeAction && Zoe.GetComponent<HeroController>().debris > 0)
+        if(distanceRobotZoe < 2.5 && !QTEStart && Zoe.GetComponent<HeroController>().makeAction && Zoe.GetComponent<HeroController>().debris > 0 && Robot.GetComponent<RobotController>().etat < 3)
         {
             Arrow[0].GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0.9635534f, 1f);
             Arrow[1].GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0.9635534f, 1f);
